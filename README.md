@@ -21,7 +21,7 @@ Visualize IT consisted of 6 Radford University Computer Science Software Enginee
 
 ## Binary Search Tree Documentation
 
-![binary-search-tree](https://user-images.githubusercontent.com/49283017/147860931-62314399-05ea-4885-bf1d-6bbcf5656797.png)
+![binary-search-tree-documentation](https://user-images.githubusercontent.com/49283017/147860980-2478a6d8-b1be-40cd-9c12-02f42cbafd3d.png)
 
 ## Sorting Algorithms
 
