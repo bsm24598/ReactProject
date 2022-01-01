@@ -1,0 +1,47 @@
+name: Parallel Cypress Tests
+
+on:
+  push:
+    branches:
+      - Sprint4
+  
+
+jobs:
+  test:
+    name: E2E on Node v${{ matrix.node }}
+    runs-on: ubuntu-16.04
+    strategy:
+      # when one test fails, DO NOT cancel the other
+      # containers, because this will kill Cypress processes
+      # leaving the Dashboard hanging ...
+      # https://github.com/cypress-io/github-action/issues/48
+      fail-fast: false
+      matrix:
+        # run 12 copies of the current job in parallel
+        containers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # because of "record" and "parallel" parameters
+      # these containers will load balance all found tests among themselves
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          working-directory: visualize-it
+          #config-file: cypress.json this is the default config file that cypress is looking for
+          record: true
+          start: npm start
+          parallel: true
+          group: Tests on Node v${{ matrix.node }}
+          cache-key: node-v${{ matrix.node }}-on-${{ runner.os }}-hash-${{ hashFiles('yarn.lock') }}
+        env:
+          # pass the Dashboard record key as an environment variable
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          # Recommended: pass the GitHub token lets this action correctly
+          # determine the unique run id necessary to re-run the checks
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
