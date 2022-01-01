@@ -4,7 +4,7 @@
 Visualize IT aims to make clear the subject of intermediate level computer science courses through visualization.
 
 ## Our Team
-Visualize IT consisted of 6 Radford University Computer Science Software Engineering students. This project was completed over the course of two semesters. It began in the Fall of 2020 and concluded in the Spring of 2021.
+Visualize IT consisted of 6 Radford University Computer Science Software Engineering students. This project was completed over the course of two semesters. It began in the Fall of 2020 and concluded in the Spring of 2021. For privacy reasons, team member names will not be listed, so please keep in mind that not all code and work is mine. This was a team effort over the course of two semesters and was a fun project to work on!
 
 As a team member of VisualizeIT, I mainly worked on UI related tasks as a software engineer. 
 
