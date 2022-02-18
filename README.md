@@ -8,6 +8,9 @@ Visualize IT consisted of 6 Radford University Computer Science Software Enginee
 
 As a team member of VisualizeIT, I mainly worked on UI related tasks as a software engineer. 
 
+## Demo
+
+![algo](https://user-images.githubusercontent.com/49283017/154757584-5a2b7637-26de-4ce8-9b0c-203c271b017a.gif)
 
 ## Homepage
 
